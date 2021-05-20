@@ -1,0 +1,28 @@
+{
+    "name": "poppy/core",
+    "description": "An admin plugin for poppy.",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Duoli",
+            "email": "zhaody901@126.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "ext-bcmath": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Poppy\\Core\\": "src/",
+            "Poppy\\Core\\Tests\\": "tests/"
+        },
+        "files": [
+            "src/Support/functions.php"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev"
+}

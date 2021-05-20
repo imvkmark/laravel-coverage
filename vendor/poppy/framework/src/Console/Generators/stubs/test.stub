@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+
+use Poppy\Framework\Application\TestCase;
+
+class DummyClass extends TestCase
+{
+    //
+}

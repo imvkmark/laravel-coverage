@@ -1,0 +1,70 @@
+{
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.3",
+        "ext-json": "*",
+        "ext-simplexml": "*",
+        "ext-openssl": "*",
+        "ext-pdo": "*",
+        "ext-curl": "*",
+        "ext-dom": "*",
+        "ext-gd": "*",
+        "ext-bcmath": "*",
+        "laravel/framework": "6.0.*",
+        "intervention/image": "2.*",
+        "predis/predis": "~1.1",
+        "php-curl-class/php-curl-class": "8.*",
+        "poppy/framework": "3.1.x-dev",
+        "poppy/core": "3.1.x-dev",
+        "poppy/system": "3.1.x-dev",
+        "nesbot/carbon": "~2.36"
+    },
+    "require-dev": {
+        "poppy/faker": "3.1.*"
+    },
+    "autoload": {
+        "classmap": [],
+        "psr-4": {
+            "Site\\Http\\Foundation\\": "modules/site/src/http/foundation",
+            "Site\\Tests\\": "modules/site/tests/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [],
+        "psr-4": {}
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.sour-lemon.com"
+        }
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan clear-compiled"
+        ],
+        "pre-update-cmd": [],
+        "post-update-cmd": [
+            "vendor/bin/poppy",
+            "php artisan clear-compiled"
+        ],
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php -r \"copy('.env.example', '.env');\"",
+            "php artisan key:generate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "prefer-stable": true
+}

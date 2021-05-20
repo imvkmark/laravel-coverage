@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
+    bootstrap="storage/bootstrap/autoload.php"
+    cacheResultFile="storage/phpunit/test-results"
+    executionOrder="depends,defects"
+    forceCoversAnnotation="true"
+    beStrictAboutCoversAnnotation="true"
+    beStrictAboutOutputDuringTests="true"
+    beStrictAboutTodoAnnotatedTests="true"
+    backupGlobals="false"
+    backupStaticAttributes="false"
+    stopOnFailure="false"
+    failOnRisky="true"
+    processIsolation="true"
+    failOnWarning="true"
+    colors="true"
+    stderr="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    verbose="true">
+    <testsuites>
+        <testsuite name="test">
+            <directory>./modules/site/tests/</directory>
+        </testsuite>
+        <testsuite name="config">
+            <directory>./vendor/poppy/system/tests/Configuration/</directory>
+        </testsuite>
+    </testsuites>
+    <!--        <filter>-->
+    <!--            <whitelist processUncoveredFilesFromWhitelist="false" addUncoveredFilesFromWhitelist="false">-->
+    <!--                <directory suffix=".php">modules/site/src</directory>-->
+    <!--                <directory suffix=".php">vendor/poppy/system/src/</directory>-->
+    <!--            </whitelist>-->
+    <!--        </filter>-->
+    <php>
+        <env name="APP_ENV" value="testing"/>
+    </php>
+    <coverage cacheDirectory="storage/phpunit/coverage-cache" processUncoveredFiles="true" includeUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">modules/site/src</directory>
+            <directory suffix=".php">vendor/poppy/system/src/</directory>
+        </include>
+        <report>
+            <html outputDirectory="storage/phpunit/coverage-html" lowUpperBound="50" highLowerBound="90"/>
+        </report>
+    </coverage>
+</phpunit>

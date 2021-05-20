@@ -1,0 +1,12 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Http\Request;
+
+use Poppy\Framework\Application\Controller;
+
+class DummyClass extends Controller
+{
+    //
+}

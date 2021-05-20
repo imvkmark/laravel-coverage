@@ -1,0 +1,36 @@
+-
+  description: 系统权限
+  slug: backend:py-system
+  title: 系统
+  groups:
+    -
+      slug: global
+      title: 全局
+      description: 管理配置内容
+      permissions:
+        -
+          slug: manage
+          description: 系统设置
+        -
+          slug: addon
+          description: 扩展管理
+    -
+      slug: pam
+      title: 账号
+      permissions:
+        -
+          slug: manage
+          description: 账号管理
+        -
+          slug: log
+          description: 登录日志
+    -
+      slug: role
+      title: 角色
+      permissions:
+        -
+          slug: manage
+          description: 角色管理
+        -
+          slug: permissions
+          description: 角色权限

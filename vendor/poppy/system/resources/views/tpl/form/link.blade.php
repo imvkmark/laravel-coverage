@@ -1,0 +1,1 @@
+{!! app('html')->link($url, $label, $attributes) !!}

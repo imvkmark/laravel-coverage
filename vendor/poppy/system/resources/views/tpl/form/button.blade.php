@@ -1,0 +1,1 @@
+{!! app('form')->button($label, $attributes) !!}

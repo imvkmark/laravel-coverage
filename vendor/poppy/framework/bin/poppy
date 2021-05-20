@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+
+use Poppy\Framework\Cli\Invoker;
+
+$dir = dirname(__DIR__);
+
+if (!file_exists($dir . '/autoload.php')) {
+    $dir = __DIR__ . '/../vendor';
+}
+
+if (!file_exists($dir . '/autoload.php')) {
+    $dir = __DIR__ . '/../../..';
+}
+
+if (!file_exists($dir . '/autoload.php')) {
+    echo 'Autoload not found.';
+    exit(1);
+}
+
+require $dir . '/autoload.php';
+
+$basePath = dirname(realpath($dir));
+
+exit((new Invoker($basePath))(...$argv) ? 0 : 1);

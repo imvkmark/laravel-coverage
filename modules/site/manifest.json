@@ -1,0 +1,9 @@
+{
+	"name": "site",
+	"slug": "site",
+	"version": "1.0",
+	"description": "This is the description for the poppy site module.",
+	"autoload": [
+		"src/classes/functions.php"
+	]
+}

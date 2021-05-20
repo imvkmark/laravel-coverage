@@ -1,0 +1,4 @@
+<cross-domain-policy>
+	<allow-access-from domain="*.larxd.com"/>
+	<allow-access-from domain="*.sour-lemon.com"/>
+</cross-domain-policy>

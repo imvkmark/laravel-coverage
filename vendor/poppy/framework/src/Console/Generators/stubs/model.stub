@@ -1,0 +1,16 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Database\Eloquent\Model;
+
+class DummyClass extends Model
+{
+    // change tablename
+    protected $table = 'table_name';
+
+    protected $fillable = [
+        // fillable
+    ];
+
+}
