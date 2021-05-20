@@ -27,7 +27,8 @@
         "nesbot/carbon": "~2.36"
     },
     "require-dev": {
-        "poppy/faker": "3.1.*"
+        "poppy/faker": "3.1.*",
+        "phpunit/phpunit": "9.*"
     },
     "autoload": {
         "classmap": [],

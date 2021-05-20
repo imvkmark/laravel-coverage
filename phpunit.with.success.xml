@@ -28,20 +28,20 @@
             <directory>./vendor/poppy/system/tests/Configuration/</directory>
         </testsuite>
     </testsuites>
-    <!--            <filter>-->
-    <!--                <whitelist processUncoveredFilesFromWhitelist="false" addUncoveredFilesFromWhitelist="false">-->
-    <!--                    <directory suffix=".php">modules/site/src</directory>-->
-    <!--                    <directory suffix=".php">vendor/poppy/system/src/</directory>-->
-    <!--                </whitelist>-->
-    <!--            </filter>-->
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="false" addUncoveredFilesFromWhitelist="false">
+            <directory suffix=".php">modules/site/src</directory>
+            <directory suffix=".php">vendor/poppy/system/src/</directory>
+        </whitelist>
+    </filter>
     <php>
         <env name="APP_ENV" value="testing"/>
     </php>
     <coverage cacheDirectory="storage/phpunit/coverage-cache" processUncoveredFiles="true" includeUncoveredFiles="true">
-        <include>
-            <directory suffix=".php">modules/site/src</directory>
-            <directory suffix=".php">vendor/poppy/system/src/</directory>
-        </include>
+        <!--        <include>-->
+        <!--            <directory suffix=".php">modules/site/src</directory>-->
+        <!--            <directory suffix=".php">vendor/poppy/system/src/</directory>-->
+        <!--        </include>-->
         <report>
             <html outputDirectory="storage/phpunit/coverage-html" lowUpperBound="50" highLowerBound="90"/>
         </report>
